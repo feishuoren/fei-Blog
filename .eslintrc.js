@@ -19,11 +19,18 @@ module.exports = {
     }
   },
   'plugins': [
-    'react'
+    'react',
+    'react-hooks'
   ],
   'rules': {
     'indent': [2, 2],
     'eqeqeq': [2, 'always'],
-    'quotes': [2, 'single']
+    'quotes': [2, 'single'],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': [
+      'warn', {
+        'additionalHooks': 'useRecoilCakkback'
+      }
+    ]
   }
 }

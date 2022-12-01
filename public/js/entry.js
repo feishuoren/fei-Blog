@@ -1,4 +1,4 @@
-import '!style-loader!css-loader!./style.css';
+import '!style-loader!css-loader!../styles/style.css';
 import React from 'react';
 import * as ReactDom from 'react-dom/client';
 import App from './App';
