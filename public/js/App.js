@@ -1,29 +1,27 @@
-import React,{useState} from 'react';
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import React, {useEffect} from 'react'
+import { RecoilRoot } from 'recoil'
 
-function App() {
+import Navigation from './Navigation'
+import Content from './Content'
+
+import '!style-loader!css-loader!../styles/style.css'
+import {handleMouseMove} from './mouseHandler'
+
+export default function App() {
+  useEffect(() => {
+    document.body.addEventListener('mousemove',handleMouseMove)
+
+    return () => {
+      document.body.removeEventListener('mousemove',handleMouseMove)
+    }
+  }, [])
+
   return (
     <RecoilRoot>
-      <CountWrap />
+      <div id = 'wrap'>
+        <Navigation />
+        <Content />
+      </div>
     </RecoilRoot>
-  );
+  )
 }
-
-function CountWrap() {
-  const [count,setCount] = useState(0);
-
-  return <div>
-    <p>current count: {count} ~</p>
-    <button onClick={() => setCount(count + 1)}>
-      Click me
-    </button>
-  </div>
-}
-
-export default App;
