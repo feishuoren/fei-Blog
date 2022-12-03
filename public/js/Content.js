@@ -5,6 +5,8 @@ import {
 } from './atom'
 import '!style-loader!css-loader!../styles/content.css'
 
+import Game from './Game'
+
 export default function Content() {
   const [count,setCount] = useRecoilState(counter)
   const incrementByOne = () => setCount(count + 1)
@@ -15,6 +17,7 @@ export default function Content() {
       <button onClick={incrementByOne}>
         Click me
       </button>
+      <Game />
     </div>
   )
 }

@@ -15,18 +15,16 @@ export function handleMouseMove(e) {
   body.appendChild(bubbles)
 
   setTimeout(() => {
-   bubbles.remove()
+    bubbles.remove()
   },2000)
 
 }
 
-export function handleClick(e) { 
+export function handleClick() { 
 
 }
 
 export function handleMouseDown(e) {
-  let body = document.querySelector('body')
-
   // 点击爱心特效
   // 文字数组
   const text = ['hi~', '点点点~', '啦啦啦~', '干嘛呀~', '哦吼~', '咦~'];
@@ -72,13 +70,13 @@ export function handleMouseDown(e) {
   heart_txt.style.color = color
 
   for (let i = 0; i < 3; i++) {
-      heart_box.children[i].style.background = color
+    heart_box.children[i].style.background = color
   }
 
 }
 
 
-export function handleMouseUp(e) {
+export function handleMouseUp() {
   // 爱心消失删除
   const boxs = document.getElementsByClassName('heart_box')
 
@@ -88,9 +86,9 @@ export function handleMouseUp(e) {
     boxs[i].style.opacity = '0'
 
     setTimeout(() => {
-     if (boxs[i]) {
-       boxs[i].remove()
-     }
+      if (boxs[i]) {
+        boxs[i].remove()
+      }
     },2000)
   }
 
