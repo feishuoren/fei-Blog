@@ -13,9 +13,10 @@ body{
   body {
     overflow: hidden;
     height: 100vh;
+    position: relative;
   }
 
-  span{
+  .kitty {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -29,7 +30,7 @@ body{
     animation: animate 2s linear infinite;
   }
 
-  @keyframes animate{
+  @keyframes animate {
     0%{
       transform: translate(-50%, -50%);
       opacity: 1;
@@ -39,6 +40,45 @@ body{
       opacity: 0;
     }
   }
+
+  .heart_box {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    position: absolute;
+    z-index: 1000;
+    transition: 1s;
+  }
+
+  .heart_left, .heart_right {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+  }
+
+  .heart_right {
+    right: 0;
+  }
+
+  .heart_under {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 5px;left: 5px;
+    transform: rotate(45deg)
+  }
+
+  .heart_text {
+    width: 50px;
+    font-size: 10px;
+    line-height: 1;
+    position: absolute;
+    top: -1em;
+    left: -15px;
+    text-align: center;
+  }
+
 
 
 }

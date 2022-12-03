@@ -1,6 +1,6 @@
 #nav_box {
   overflow: hidden;
-  background-color: #000;
+  background-color: #202020d9;
 }
 
 @media print {
@@ -43,20 +43,20 @@
 
 .nav_item {
   width: 100%;
-  border: 1px solid rgba(47, 41, 234, 0.5);
+/*  border: 1px solid rgba(47, 41, 234, 0.5);*/
   border-bottom: none;
-  box-shadow: inset 1px 1px 1px 3px rgba(198, 193, 236, 0.2);
-  -webkit-box-shadow: inset 1px 1px 1px 3px rgba(198, 193, 236, 0.2);
+  box-shadow: inset 1px 1px 1px 1px rgba(198, 193, 236, 0.2);
+  -webkit-box-shadow: inset 1px 1px 1px 1px rgba(198, 193, 236, 0.2);
   box-sizing: border-box;
   text-align: center;
   padding: 0.5em 0.5em;
   font-size: 1em;
   color: #fff;
-  background-color: #3b3636;
+  background-color: rgba(144, 114, 198, 0.3);
 }
 
 #nav_box ul li:nth-last-child(1) {
-  border-bottom: 1px solid rgba(47, 41, 234, 0.5);
+  border-bottom: 2px solid rgba(198, 193, 236, 0.2);
 }
 
 #nav_box ul li:hover {
