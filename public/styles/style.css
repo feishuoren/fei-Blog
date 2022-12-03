@@ -23,8 +23,8 @@ body{
     display: inline-block;
     background-color: #fff;
     pointer-events: none;
-    background: url(../images/kitty_white.webp) no-repeat;
-    background-size: contain;
+    background: url(../images/kitty_white.webp) no-repeat center;
+    background-size: cover;
     transform: translate(-50%, -50%);
     border-radius: 50%;
     animation: animate 2s linear infinite;
