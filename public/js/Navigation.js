@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { useRecoilState, useRecoilValue, useSetRecoilState} from 'recoil'
+import React from 'react'
+import { useRecoilValue } from 'recoil'
 import {
   navList
 } from './atom'
 import '!style-loader!css-loader!../styles/navigation.css'
+import Performance from './Performance.js'
 
 export default function Navigation() {
   const names = useRecoilValue(navList)
@@ -13,6 +14,7 @@ export default function Navigation() {
 
   return (
     <div id = 'nav_box'>
+      <Performance />
       <ul id = 'nav_items'>
         {listItems}
       </ul> 
