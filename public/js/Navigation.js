@@ -1,5 +1,7 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
+import { Link } from "react-router-dom";
+
 import {
   navList
 } from './atom'
@@ -23,5 +25,9 @@ export default function Navigation() {
 }
 
 function ListItem(props) {
-  return <li className = 'nav_item'>{props.item.title}</li>
+  return (
+    <li className = 'nav_item'>
+      <Link to={props.item.link}>{props.item.title}</Link>
+    </li>
+  )
 }

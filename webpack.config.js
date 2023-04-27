@@ -13,6 +13,7 @@ module.exports = {
     poll: 1000,
     aggregateTimeout: 600,
   },
+  devtool: 'source-map',  // 代码调试
   module: {
     rules: [
       {

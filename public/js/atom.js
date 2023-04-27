@@ -4,7 +4,7 @@ import axios from 'axios'
 export const navList = atom({
   key: 'navList',
   default: [
-    {id: 1, title: 'Home', link: '/home'},
+    {id: 1, title: 'Home', link: '/'},
     {id: 2, title: 'Game', link: '/game'},
     {id: 3, title: 'TopList', link: '/topList'},
   ],
@@ -14,7 +14,6 @@ export const counter = atom({
   key: 'myCounter',
   default: 0,
 })
-
 
 export const timer = atom({
   key: 'myTimer',
